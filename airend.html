@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="main-html-wrp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <meta name="viewport" content="width=1400">
+    <title>Airend</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="site-wrapper">
+    <div class="container" data-default-background="assets/airend/airend_l_.mp4">
+		
+		<div id="whiteOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 1;"></div>
+
+        <video autoplay loop muted playsinline id="backgroundVideo">
+    		<source src="assets/airend/airend_l_.mp4" type="video/mp4">
+    		Your browser does not support the video tag.
+			</video>
+		
+		<img id="backgroundImg" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; object-fit: cover;" alt="Background Image">
+
+		
+		<div class="text-box" id="textBox" style="display: none;">
+    		<div class="title"></div>
+   			<div class="body"></div>
+		</div>
+
+        
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <br><br><img src="assets/nav/FSE-Logo-optimized.png" alt="Logo"><br><br><br><br>
+            </div>
+            <div class="nav-title">Airend</div><br>
+            <div class="nav-body">
+                Manufactured with precision machined components for multiple stages of compression. The airend of a centrifugal compressor provides a continuous and steady flow of compressed air, low maintenance requirements, and high efficiency.
+            </div>
+           <br><hr><br>
+				<button class="nav-button" onclick="displayBullGearInfo(this)">
+    			<img src="assets/nav/radio.svg" alt="Icon" class="radio-icon" style="height: 18px;"> 
+    			Bull Gear
+				</button>
+			
+				<button class="nav-button" onclick="displayMainOilPumpInfo(this)">
+        		<img src="assets/nav/radio.svg" alt="Icon" class="radio-icon" style="height: 18px;"> 
+        		Main Oil Pump
+    			</button>
+			
+                <button class="nav-button" onclick="displayCasingsInfo(this)">
+        		<img src="assets/nav/radio.svg" alt="Icon" class="radio-icon" style="height: 18px;"> 
+        		Casings 
+    			</button>
+			
+				<button class="nav-button" onclick="displaySealsInfo(this)">
+    			<img src="assets/nav/radio.svg" alt="Icon" class="radio-icon" style="height: 18px;"> 
+    			Seals
+				</button>
+			
+				<button class="nav-button" onclick="displayBearingsInfo(this)">
+        		<img src="assets/nav/radio.svg" alt="Icon" class="radio-icon" style="height: 18px;"> 
+        		Bearings
+    			</button>
+			
+                <button class="nav-button" onclick="displayRotorAssemblyInfo(this)">
+        		<img src="assets/nav/radio.svg" alt="Icon" class="radio-icon" style="height: 18px;"> 
+        		Rotor Assembly 
+    			</button>
+			
+				<button class="nav-button" onclick="displayInstrumentationInfo(this)">
+    			<img src="assets/nav/radio.svg" alt="Icon" class="radio-icon" style="height: 18px;"> 
+    			Instrumentation
+				</button>
+			
+			    <!-- Back button -->
+    			<button class="nav-button" onclick="playVideo('assets/cameramove/airend_b_.mp4', 'index.html')">
+       			<img src="assets/nav/back.svg" alt="Icon" style="height: 18px;"> 
+        		Back
+    			</button>			
+        </div>
+        
+        <div id="videoOverlay" style="display:none; position:absolute; top:0; left:0; width:1920px; height:1080px; background:white; z-index:2;"></div>
+    	<video id="videoPlayer" onended="redirectAfterVideo()" style="z-index:3; position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"></video>
+
+
+    </div>
+    <script src="script.js"></script>
+	<script src="airend.js"></script>
+</div>
+</body>
+</html>

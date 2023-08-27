@@ -1,0 +1,216 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;  /* Adjusted to fill the viewport */
+    height: 100%; 
+    overflow: hidden;
+}
+
+#backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;  /* Setting the z-index to 2 to be on top of video */
+}
+
+
+.container {
+	background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    text-align: left; /* Ensure everything is left-aligned */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+}
+
+.nav-bar {
+    position: absolute;
+    padding: 20px 10px 10px 10px; /* 40px padding at the top */
+    top: 0;
+    left: 0;
+    width: 304px; /* or whatever width you prefer */
+    height: 100%;
+    text-align: left; /* Ensure everything is left-aligned */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Adjust to start items from the left */
+    justify-content: flex-start; /* Adjust to start items from the top */
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2); /* x=0, y=8, blur=10, black with 20% opacity */
+	z-index: 10; /* Higher than the default value of 1 */
+}
+
+
+button {
+    margin: 10px 0;
+}
+
+#videoPlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+	
+}
+
+/* Fonts */
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.nav-body {
+    font-size: 18px;
+}
+
+.nav-button {
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+	width: 100%;
+    align-items: center;
+    gap: 8px;
+	background: none; /* No visible background */
+    border: none; /* Remove any default border */
+    padding: 10px 20px; /* Adding padding to increase clickable area */
+    margin: 5px 0; /* Some space between buttons */
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+    text-align: left; /* Left align the text */
+    outline: none; /* Remove focus outline for aesthetic purposes. Be careful with this in terms of accessibility */
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* A subtle hover effect */
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.body {
+    font-size: 18px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+
+.nav-logo img {
+    width: auto;
+    height: 50px;  /* Adjust this as necessary */
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none; /* Removing border */
+    height: 1px;
+    background-color: rgba(0,0,0,0.12); /* Making it black for visibility */
+    width: 100%; /* Ensuring it takes full width */
+}
+
+.site-wrapper {
+    display: flex;
+    align-items: center; /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    height: 100vh; /* full viewport height */
+    width: 100vw; /* full viewport width */
+    overflow: hidden; /* optional, to ensure no unwanted scrollbars appear */
+}
+
+#whiteOverlay {
+    display: none;
+}
+
+.text-box {
+    width: 275px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+    border: 1px solid #ccc;
+    position: absolute;
+    z-index: 20; /* to make sure it stays on top of the images */
+}
+
+.text-box .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.text-box .body {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text-box ul {
+    list-style-type: disc;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+.text-box ul ul {
+    list-style-type: circle;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+#backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+    object-fit: cover;
+}
+
+.main-html-wrp.mystyle-ornt .site-wrapper {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    /* width: 100vh;
+    overflow: auto; */
+}
+/* .main-html-wrp.mystyle-ornt #backgroundImg {
+    object-fit: contain !important;
+}
+.main-html-wrp.mystyle-ornt #backgroundVideo {
+    object-fit: contain !important;
+} */
+/* .main-html-wrp.mystyle-ornt .site-wrapper > .container {
+    height: 100vw;
+}
+.main-html-wrp.mystyle-ornt .site-wrapper .nav-bar {
+    height: 100vw;
+    overflow: auto;
+} */
